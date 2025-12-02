@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopGaming - Temukan Game Favoritmu</title>
+    <title>ShopGames - Temukan Game Favoritmu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -15,7 +15,7 @@
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-gamepad text-purple-500 text-2xl"></i>
-                <span class="font-bold text-xl text-white">ShopGames</span>
+                <span class="font-bold text-xl text-white">ShopGaming</span>
             </div>
             <div class="hidden md:flex space-x-6">
                 <a href="#" class="text-gray-300 hover:text-white">Home</a>
@@ -40,9 +40,9 @@
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">"Selamat Datang di ShopGaming"</h1>
                 <p class="text-xl text-gray-300 mb-8">"Temukan & beli game favoritmu dengan harga terbaik"</p>
                 <div class="flex justify-center space-x-4">
-                    <a href="{{ route('login') }}"
+                    <a href="{{ route('register') }}"
                         class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 transform hover:scale-105">Shop</a>
-                    <a href={{ route('register') }}"
+                    <a href={{ route('register') }}
                         class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 transform hover:scale-105">Explore</a>
                 </div>
             </div>
@@ -58,20 +58,23 @@
             <!-- Game Card 1 -->
             <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
                 <div class="bg-gray-700 h-48 flex items-center justify-center">
-                    <i class="fas fa-gamepad text-5xl text-gray-500"></i>
+                    <img src="/gambare/OIPp.jpg" alt="Gambar Game" class="w-full h-full object-cover" />
                 </div>
                 <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2">Title</h3>
-                    <p class="text-gray-400 text-sm mb-4">Game populer dengan grafis yang menarik dan gameplay seru.
-                        Hadapi tantangan dan taklukkan semua level.</p>
+                    <h3 class="font-bold text-xl mb-2">Sokoban</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Game populer dengan grafis yang menarik dan gameplay seru. Hadapi tantangan dan taklukkan semua level.
+                    </p>
                     <a href="#" class="text-purple-500 hover:text-purple-400">Lihat Detail →</a>
                 </div>
             </div>
+            
+            
 
             <!-- Game Card 2 -->
             <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
                 <div class="bg-gray-700 h-48 flex items-center justify-center">
-                    <i class="fas fa-gamepad text-5xl text-gray-500"></i>
+                    <img src="/gambare/bagroundpwr.jpg" alt="Pairs" class="w-full h-full object-cover" />
                 </div>
                 <div class="p-6">
                     <h3 class="font-bold text-xl mb-2">Title</h3>
@@ -84,10 +87,10 @@
             <!-- Game Card 3 -->
             <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
                 <div class="bg-gray-700 h-48 flex items-center justify-center">
-                    <i class="fas fa-gamepad text-5xl text-gray-500"></i>
+                    <img src="/gambare/OIP (14).jpg" alt="Gambar Game" class="w-full h-full object-cover" />
                 </div>
                 <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2">Title</h3>
+                    <h3 class="font-bold text-xl mb-2">KnightRealms</h3>
                     <p class="text-gray-400 text-sm mb-4">Strategi yang menantang dengan visual memukau. Buat keputusan
                         cerdas dan kalahkan lawan-lawanmu.</p>
                     <a href="#" class="text-purple-500 hover:text-purple-400">Lihat Detail →</a>

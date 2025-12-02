@@ -19,7 +19,8 @@ class Produk extends Model
         'gambar',
         'kategori_id',
         'platform',
-        'zip_file'
+        'zip_file',
+        'user_id'
     ];
 
 
@@ -35,4 +36,7 @@ class Produk extends Model
     {
         return $this->belongsTo(Kategori::class);
     }
+
+    
+
 }

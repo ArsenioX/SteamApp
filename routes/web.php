@@ -40,7 +40,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 });
 
 //produk admin
-Route::get('/produk', [ProdukController::class, 'index'])->name('adminHome');
+Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
 Route::get('/produk/create', [ProdukController::class, 'create'])->name('produk.create');
 Route::post('/produk', [ProdukController::class, 'store'])->name('produk.store');
 Route::get('/produk/{id}', [ProdukController::class, 'show'])->name('produk.show');
@@ -81,3 +81,5 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/transaksi/library', [PembelianController::class, 'library'])->name('user.transaksi.library');
 });
 Route::delete('/library/{id}/delete', [PembelianController::class, 'hapusDariLibrary'])->name('user.library.delete');
+
+Route::resource('kategori', KategoriController::class);

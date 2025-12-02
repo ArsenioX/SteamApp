@@ -31,4 +31,15 @@ class User extends Authenticatable
     ];
 
     // Hapus accessor type()
+
+    public function produks()
+    {
+        return $this->hasMany(Produk::class);
+    }
+
+    // di app/Models/User.php
+    public function transaksis()
+    {
+        return $this->hasMany(Transaksi::class);
+    }
 }

@@ -14,7 +14,7 @@ class Transaksi extends Model
     // Transaksi.php
     public function produk()
     {
-        return $this->belongsTo(Produk::class, 'kode_produk', 'kode_produk');
+        return $this->belongsTo(Produk::class, 'kode_produk', 'kode_produk',);
     }
 
     
@@ -23,5 +23,7 @@ class Transaksi extends Model
     {
         return $this->belongsTo(Transaksi::class);
     }
+
+    
     
 }

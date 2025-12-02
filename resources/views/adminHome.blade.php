@@ -4,6 +4,26 @@
     <div class="px-6 py-6">
         <h2 class="text-2xl font-semibold text-white mb-6">Overview</h2>
 
+        {{-- Form Search dan Filter --}}
+        <form method="GET" action="{{ route('produk.index') }}" class="mb-6 flex flex-wrap items-center gap-4">
+            <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari nama produk..."
+                class="px-4 py-2 rounded bg-gray-700 text-white border border-gray-600 placeholder-gray-400" />
+
+            <select name="kategori" class="px-4 py-2 rounded bg-gray-700 text-white border border-gray-600">
+                <option value="">Semua Kategori</option>
+                @foreach ($kategoris as $kategori)
+                    <option value="{{ $kategori->id }}" {{ request('kategori') == $kategori->id ? 'selected' : '' }}>
+                        {{ $kategori->nama }}
+                    </option>
+                @endforeach
+            </select>
+
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                Cari
+            </button>
+        </form>
+
+
         <div class="bg-gray-800 rounded-lg shadow overflow-x-auto">
             <table class="min-w-full text-white table-auto">
                 <thead class="bg-gray-700">

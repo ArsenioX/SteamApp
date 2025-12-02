@@ -1,12 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.form')
 
 @section('content')
-    <div class="container">
-        <h2>Edit Kategori</h2>
+    <div class="max-w-xl mx-auto">
+        <h2 class="text-2xl font-bold text-purple-400 mb-6">✏️ Edit Kategori</h2>
 
+        {{-- Error Messages --}}
         @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                <ul class="list-disc pl-5 space-y-1">
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach
@@ -14,15 +15,27 @@
             </div>
         @endif
 
-        <form action="{{ route('kategori.update', $kategori->id) }}" method="POST">
+        <form action="{{ route('kategori.update', $kategori->id) }}" method="POST"
+            class="space-y-5 bg-[#1a1a2e] p-6 rounded-xl shadow-md border border-purple-700">
             @csrf
             @method('PUT')
-            <div class="mb-3">
-                <label for="nama" class="form-label">Nama Kategori</label>
-                <input type="text" name="nama" class="form-control" id="nama" value="{{ $kategori->nama }}" required>
+
+            <div>
+                <label for="nama" class="block text-purple-300 mb-1">Nama Kategori</label>
+                <input type="text" name="nama" id="nama" value="{{ $kategori->nama }}"
+                    class="w-full p-2 rounded-lg bg-[#2e2e3a] border border-purple-500 text-white focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    required>
             </div>
-            <button type="submit" class="btn btn-primary">Update</button>
-            <a href="{{ route('kategori.index') }}" class="btn btn-secondary">Batal</a>
+
+            <div class="flex justify-between items-center">
+                <button type="submit"
+                    class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-all">
+                    💾 Update
+                </button>
+                <a href="{{ route('kategori.index') }}" class="text-purple-400 hover:underline font-medium">
+                    Batal
+                </a>
+            </div>
         </form>
     </div>
 @endsection
