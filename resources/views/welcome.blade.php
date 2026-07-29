@@ -68,8 +68,8 @@
                     <a href="#" class="text-purple-500 hover:text-purple-400">Lihat Detail →</a>
                 </div>
             </div>
-            
-            
+
+
 
             <!-- Game Card 2 -->
             <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
@@ -148,7 +148,7 @@
                     <div>
                         <h3 class="font-bold mb-2">ShopPoints</h3>
                         <p class="text-gray-400 text-sm">Dapatkan poin untuk setiap pembelian yang dapat ditukarkan
-                            dengan diskon atau game gratis. Member loyal mendapatkan keuntungan lebih.</p>
+                            dengan diskon atau game gratiss. Member loyal mendapatkan keuntungan lebih.</p>
                     </div>
                 </div>
             </div>
